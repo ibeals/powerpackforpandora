@@ -12,6 +12,8 @@ function querySite(url_pack, callback) {
       chrome.tabs.sendMessage(tabs[0].id, true, function(value) {
         callback(tabs[0], value);
       });
+    } else {
+	chrome.windows.create({url: 'https://www.pandora.com', focused: true});
     }
   });
 }
