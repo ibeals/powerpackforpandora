@@ -1,7 +1,14 @@
 {
   "name": "SuperBoost for Pandora",
   "description": "Toggle activity with keyboard shortcuts on Pandora",
-  "version": "0.1.0.0",
+  "version": "0.1.0.1",
+  "icons": {
+    "16": "128logo.png",
+    "38": "128logo.png",
+    "48": "128logo.png",
+    "96": "128logo.png",
+    "128": "128logo.png"
+  },
   "permissions": [
     "notifications",
     "tabs",
