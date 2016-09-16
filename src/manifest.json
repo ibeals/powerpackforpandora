@@ -1,7 +1,7 @@
 {
-  "name": "PandoraWhisper",
-  "description": "Toggle Activity on Pandora",
-  "version": "0.1.0",
+  "name": "SuperBoost for Pandora",
+  "description": "Toggle activity with keyboard shortcuts on Pandora",
+  "version": "0.1.0.0",
   "permissions": [
     "notifications",
     "tabs",

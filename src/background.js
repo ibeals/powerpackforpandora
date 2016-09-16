@@ -13,7 +13,7 @@ function querySite(url_pack, callback) {
         callback(tabs[0], value);
       });
     } else {
-	chrome.windows.create({url: 'https://www.pandora.com', focused: true});
+	     chrome.windows.create({url: 'http://www.pandora.com', focused: true});
     }
   });
 }
@@ -23,6 +23,7 @@ function sendScript(tab, toggle_code) {
     code: toggle_code
   });
 }
+
 // This is the catch for the key command being pressed.
 chrome.commands.onCommand.addListener(function(command) {
   if (command == 'toggle-pandora-play') {
