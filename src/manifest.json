@@ -2,7 +2,7 @@
   "name": "PowerPack for Pandora",
   "short_name": "PowerPack",
   "description": "Toggle activity with keyboard shortcuts on Pandora",
-  "version": "0.1.0.3",
+  "version": "0.1.0.4",
   "icons": {
     "16": "128logo.png",
     "38": "128logo.png",

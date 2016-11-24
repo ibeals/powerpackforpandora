@@ -5,7 +5,6 @@ var pandora_sites = [
       'https://pandora.com/*'
     ],
     station_timeout = null,
-    toggle_gate = null,
     change_gate = null;
 
 function querySite(url_pack, callback, operation) {
@@ -34,9 +33,7 @@ function sendScript(tab, toggle_code, callback) {
 // This is the catch for the key command being pressed.
 chrome.commands.onCommand.addListener(function(command) {
 
-  if (command == 'toggle-pandora-play' && toggle_gate == null) {
-
-    toggle_gate = true;
+  if (command == 'toggle-pandora-play') {
 
     querySite(pandora_sites, function(tab, value) {
       var toggle_code = (value ?
@@ -47,9 +44,7 @@ chrome.commands.onCommand.addListener(function(command) {
       sendScript(
         tab,
         toggle_code,
-        function() {
-          toggle_gate = null;
-        }
+        function() {}
       );
     }, 'toggle_check');
 
