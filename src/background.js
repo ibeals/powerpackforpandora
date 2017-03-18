@@ -34,12 +34,8 @@ function sendScript(tab, toggle_code, callback) {
 chrome.commands.onCommand.addListener(function(command) {
 
   if (command == 'toggle-pandora-play') {
-
     querySite(pandora_sites, function(tab, value) {
-      var toggle_code = (value ?
-        'document.querySelector("#playbackControl > .buttons > .pauseButton > a").click();' :
-        'document.querySelector("#playbackControl > .buttons > .playButton > a").click();'
-      );
+      var toggle_code = "document.querySelector('.Tuner__Audio__Control__Play > span > button').click()";
 
       sendScript(
         tab,
@@ -64,7 +60,7 @@ chrome.commands.onCommand.addListener(function(command) {
         querySite(pandora_sites, function(tab) {
           sendScript(
             tab,
-            'document.querySelector("#playbackControl > .buttons > .skipButton > a").click();',
+            'document.querySelector(".Tuner__Audio__Control__Skip > span > button").click();',
             function() {
               station_timeout = null;
               change_gate = null;
