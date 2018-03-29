@@ -15,11 +15,6 @@ chrome.runtime.onMessage.addListener(function (operation, sender, sendResponse) 
 		if (next_stations !== null && next_stations.length > 1) {
 			for (var i = (next_stations.length - 1); i >= 0; i--) {
 				if (next_stations[i].className == "StationList__recommended") {
-					found_recommend = true;
-					continue;
-				}
-
-				if (!found_recommend) {
 					continue;
 				}
 
